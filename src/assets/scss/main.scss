@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box
+}
+
+*,
+:focus {
+  outline: none !important
+}
+
+html {
+  scroll-behavior: smooth
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+p,
+ul {
+  margin: 0
+}
+
+ol,
+ul {
+  padding: 0;
+  list-style: none
+}
+
+a {
+  color: inherit
+}
+
+a,
+a:hover {
+  text-decoration: none
+}
+
+img {
+  border: none
+}
+
+form {
+  margin: 0
+}
+
+input {
+  border: none;
+  outline: 0;
+  font-family: FSElliotPro;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield
+}
+
+input[type=submit] {
+  cursor: pointer
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0
+}
+
+textarea {
+  resize: none;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  overflow: auto
+}
+
+::-moz-placeholder {
+  color: inherit;
+  opacity: 1;
+  -moz-transition: opacity .3s ease;
+  transition: opacity .3s ease
+}
+
+::placeholder {
+  color: inherit;
+  opacity: 1;
+  transition: opacity .3s ease
+}
+
+input:focus ::-moz-placeholder,
+input:focus::-moz-placeholder {
+  opacity: .65
+}
+
+input:focus ::placeholder {
+  opacity: .65
+}
+
+:after,
+:before,
+label {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none
+}
+
+input,
+input:after,
+input:before,
+textarea,
+textarea:after,
+textarea:before {
+  -webkit-user-select: initial;
+  -moz-user-select: initial;
+  user-select: auto
+}
+
+body,
+html {
+  margin: 0;
+  height: 100%
+}
+
+body {
+  font-family: FSElliotPro;
+  color: #fff
+}
+
+#wrapper {
+  min-width: 320px
+}
+
+#content {
+  margin: 0 auto
+}
+
+.clear {
+  clear: both
+}
+
+.reset,
+.reset li {
+  list-style: none;
+  padding: 0;
+  margin: 0
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: #fff;
+  outline: 0;
+  font-family: FSElliotPro;
+  background: transparent
+}
+
+.ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden
+}

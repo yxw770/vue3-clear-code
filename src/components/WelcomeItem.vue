@@ -89,9 +89,20 @@ h3 {
 import GFToastify from './GFToastify.vue';
 import { toast } from 'vue3-toastify';
 const notify = () => {
-  toast.success(GFToastify, {
+  toast.warning(GFToastify, {
     theme: 'diy',
     icon: false,
+    autoClose: 80000,
+    dangerouslyHTMLString: true, // can override the global option
+    hideProgressBar: true,
+  }); // ToastOptions
+  toast.info(GFToastify, {
+    theme: 'diy',
+    icon: false,
+    data: {
+      msg: '123123123',
+      title: '标题'
+    },
     autoClose: 80000,
     dangerouslyHTMLString: true, // can override the global option
     hideProgressBar: true,

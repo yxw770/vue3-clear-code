@@ -77,10 +77,8 @@
 
 @media only screen and (max-width:480px) {
   .Toastify__toast-container {
-    left: 0;
-    margin: 0;
-    padding: 0;
-    width: 100vw
+    right: 0;
+    width: 86vw;
   }
 
   .Toastify__toast-container--top-center,
@@ -131,7 +129,7 @@
   display: flex;
   flex: 1 1 auto;
   margin: auto 0;
-  padding: 12px 35px 20px 46px;
+  padding: 12px 0px 20px 30px;
 }
 
 .Toastify__toast-body>div:last-child {
@@ -156,12 +154,7 @@
   animation-fill-mode: both
 }
 
-@media only screen and (max-width:480px) {
-  .Toastify__toast {
-    border-radius: 0;
-    margin-bottom: 0
-  }
-}
+
 
 .Toastify__toast-theme--dark {
   background: var(--toastify-color-dark);
@@ -169,7 +162,6 @@
 }
 
 .Toastify__toast-theme--diy {
-  background-image: radial-gradient(circle at 0 -50%, rgba(211, 0, 13, .1), #252339 99%);
   color: var(--toastify-text-color-dark)
 }
 
@@ -192,19 +184,6 @@
 
 }
 
-.Toastify__toast--success {
-  .status {
-    color: var(--toastify-color-success);
-    margin-bottom: 7px;
-    font-weight: 900;
-    font-size: 16px;
-    text-transform: uppercase;
-  }
-
-  .hexagon {
-    background-image: url(@/assets/images/toastify/hexagon-success.png);
-  }
-}
 
 .Toastify__toast-body .text {
   color: #dfdeec;
@@ -785,5 +764,70 @@
 
   to {
     transform: rotate(1turn)
+  }
+}
+
+.Toastify__toast--success {
+  background-image: radial-gradient(circle at 0 -50%, rgba(0, 211, 110, .2), #252339 99%);
+
+
+  .status {
+    color: var(--toastify-color-success);
+    margin-bottom: 7px;
+    font-weight: 900;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+
+  .hexagon {
+    background-image: url(@/assets/images/toastify/hexagon-success.png);
+  }
+}
+
+.Toastify__toast--error {
+  background-image: radial-gradient(circle at 0 -50%, rgba(211, 0, 13, .1), #252339 99%);
+
+  .status {
+    color: var(--toastify-color-error);
+    margin-bottom: 7px;
+    font-weight: 900;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+
+  .hexagon {
+    background-image: url(@/assets/images/toastify/hexagon-error.png);
+  }
+}
+
+.Toastify__toast--warning {
+  background-image: radial-gradient(circle at 0 -50%, rgba(255, 214, 0, .14), #252339 99%);
+
+  .status {
+    color: #f9bf2d;
+    margin-bottom: 7px;
+    font-weight: 900;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+
+  .hexagon {
+    background-image: url(@/assets/images/toastify/hexagon-warning.png);
+  }
+}
+
+.Toastify__toast--info {
+  background-image: radial-gradient(circle at 0 -50%, rgba(126, 156, 201, .2), #252339 99%);
+
+  .status {
+    color: #a8bce3;
+    margin-bottom: 7px;
+    font-weight: 900;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+
+  .hexagon {
+    background-image: url(@/assets/images/toastify/hexagon-info.png);
   }
 }

@@ -5,6 +5,8 @@ import App from './App.vue'
 import router from './router'
 
 import './assets/main.css'
+import './assets/scss/main.scss'
+
 import Vue3Toasity from 'vue3-toastify';
 import '@/assets/scss/toastify/index.scss';
 

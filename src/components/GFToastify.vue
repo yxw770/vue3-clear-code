@@ -1,8 +1,8 @@
 <template>
   <div class="toastify-container">
-    <div class="status">error</div>
+    <div class="status">{{ getStatus }}</div>
     <div class="hexagon"></div>
-    <div class="text">Promocode not found.</div>
+    <div class="text">{{ props.toastProps.data.msg ?? '' }}</div>
 
   </div>
 </template>
@@ -14,15 +14,36 @@ export default defineComponent({
   components: {
 
   },
-  props: {
-  },
+
 });
 </script>
 
 <script setup>
+// import { ToastOptions } from 'vue3-toastify';
 
+import { reactive } from 'vue';
+const props = defineProps({
+  toastProps: {
+    default: {},
+  },
+})
 /*****************  動態變量集  start   *****************/
 
+const statusEnum = {
+  'info': 'Info',
+  'success': 'Success',
+  'warning': 'Warning',
+  'error': 'Error',
+}
+console.log(props.toastProps.data.msg)
+const getStatus = computed(() => {
+  if (props.toastProps?.data?.title) {
+    return props.toastProps.data.title;
+  } else {
+
+    return statusEnum[props.toastProps?.type] ?? 'Info';
+  }
+})
 /*****************  動態變量集   end    *****************/
 
 /*****************   生命週期   start   *****************/
@@ -47,7 +68,6 @@ export default defineComponent({
 .hexagon {
   width: 73px;
   height: 78px;
-
   position: absolute;
   top: 8%;
   bottom: 0;
