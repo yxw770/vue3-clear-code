@@ -41,11 +41,13 @@ export default defineComponent({
 <style lang="scss" scoped>
 .toastify-container {
   position: unset;
+
 }
 
 .hexagon {
   width: 73px;
   height: 78px;
+
   position: absolute;
   top: 8%;
   bottom: 0;
