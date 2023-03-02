@@ -8,6 +8,12 @@ export const constantRoutes = [
     name: "index",
     component: () => import("@/views/home/Enter.vue"),
   },
+  {
+    // 测试
+    path: "/test",
+    name: "test",
+    component: () => import("@/components/WelcomeItem.vue"),
+  },
 
   {
     path: "/:pathMatch(.*)",

@@ -92,10 +92,9 @@
       <div class="box">
         这里显示图片{{$getSteamId32('76561198862727903')}}
         <LazyLoad
-          :url="$Img('storage/upload/62ee932d6cb7e/62ee932d6cb81.png')"
+          :url="$Img()"
           my-class="box-img"
         >
-          <template #loading>loading</template>
         </LazyLoad>
       </div>
       <Auth>
@@ -127,6 +126,9 @@
 </script>
 
 <script setup>
+
+
+
   import GFToastify from "./GFToastify.vue";
   import { toast } from "vue3-toastify";
   import { gp } from "@gp";

@@ -30,3 +30,15 @@ export function setRefreshStatus(status) {
 export function removeToken() {
   return removeItem("player_token");
 }
+
+/**
+ * @description 刷新token
+ * @returns {void|Promise<void>}
+ */
+export function getRefreshToken() {
+  const token = getItem("player_token");
+  if (token) {
+    removeToken();
+  }
+  return token;
+}

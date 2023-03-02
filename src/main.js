@@ -7,7 +7,7 @@ import { setupI18n } from "./i18n";
 import App from "./App.vue";
 // import i18n from "./language/i18n";
 
-import "./assets/main.css";
+//import "./assets/main.css";
 import "./assets/scss/main.scss";
 
 import Vue3Toasity from "vue3-toastify";

@@ -1,27 +1,21 @@
 <template>
-     <div class="main-page">
-
-       <router-view v-slot="{ Component }" :key="$route.fullPath">
-         <component :is="Component" />
-       </router-view>
+     <div class="-container">
 
   </div>
 </template>
 
 <script>
-import Header from "@/views/common/header/Index.vue";
-import Footer from "@/views/common/footer/Index.vue";
 
 export default defineComponent({
-  name:  'APP',
+  name:  'Footer',
   components: {
-    Header,
-    Footer
+
   },
 });
 </script>
 
 <script setup>
+
 /*****************  外部變量集  start   *****************/
 
 /*****************  外部變量集   end    *****************/

@@ -124,3 +124,17 @@ export const parseDate = (timestamp) => {
     }
   }
 };
+
+// q:怎么让全局API的方法名字不被压缩 vite模式
+// a:在vite.config.js中配置
+// export default defineConfig({
+//   build: {
+//     terserOptions: {
+//       compress: {
+//         keep_infinity: true,
+//         drop_console: true,
+//         drop_debugger: true,
+//       },
+//     },
+//   },
+// });

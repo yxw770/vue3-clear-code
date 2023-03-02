@@ -78,7 +78,7 @@ export default function setupPlugin(app) {
          */
         $Img(url, broken_id = 1) {
             if (!url) {
-                return require('@/assets/images/common/loading-fair.svg')
+                return new URL(`/src/assets/images/common/loading-fair.svg`, import.meta.url).href;
             }
             if (url.indexOf("http") !== -1) {
                 return url;
@@ -87,7 +87,7 @@ export default function setupPlugin(app) {
             const storage_download_url = value && isJson(value) ? JSON.parse(value)['storage_download_url'] : '';
             //獲取img 訪問地址
             if (storage_download_url.indexOf("http") === -1) {
-                return require('@/assets/images/common/loading-fair.svg')
+                return new URL(`/src/assets/images/common/loading-fair.svg`, import.meta.url).href;
             }
             return storage_download_url.replace(
                 /{\$filepath}/i,
